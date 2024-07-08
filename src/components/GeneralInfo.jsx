@@ -28,16 +28,16 @@ export default function GeneralInfo() {
 
   if (!editMode) {
     return (
-      <>
+      <section className="general-info">
         <button onClick={toggleEdit}>Edit</button>
         <p>{name}</p>
         <p>{email}</p>
         <p>{phone}</p>
-      </>
+      </section>
     );
   } else {
     return (
-      <>
+      <section className="general-info edit-mode">
         <form onSubmit={saveEdit}>
           <button type="Submit">Save</button>
           <button type="button" onClick={cancelEdit}>
@@ -61,7 +61,7 @@ export default function GeneralInfo() {
             onChange={(e) => setPhone(e.target.value)}
           ></input>
         </form>
-      </>
+      </section>
     );
   }
 }
