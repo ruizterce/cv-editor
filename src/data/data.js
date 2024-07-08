@@ -18,5 +18,25 @@ let data = {
       id: uuidv4(),
     },
   ],
+  experience: [
+    {
+      company: "Airbus",
+      position: "CTO",
+      responsibilities: [
+        "Technology Strategy Development",
+        "Innovation Leadership",
+        "Research and Development Oversight",
+      ],
+      date: "2010-2015",
+      id: uuidv4(),
+    },
+    {
+      company: "Wendy's",
+      position: "Cook",
+      responsibilities: ["Food Preparation", "Quality Control"],
+      date: "2006-2009",
+      id: uuidv4(),
+    },
+  ],
 };
 export default data;
