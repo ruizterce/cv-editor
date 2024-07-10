@@ -1,6 +1,6 @@
 import { useState } from "react";
 import data from "../data/data.js";
-import editIcon from "../assets/file-edit.svg";
+import EditBtn from "./EditBtn.jsx";
 import "../styles/GeneralInfo.css";
 
 export default function GeneralInfo() {
@@ -31,9 +31,7 @@ export default function GeneralInfo() {
   if (!editMode) {
     return (
       <section className="general-info">
-        <button onClick={toggleEdit} className="edit-btn">
-          <img src={editIcon} alt="Edit" />
-        </button>
+        <EditBtn editFunction={toggleEdit} />
         <h1>{name}</h1>
         <span>{email}</span>
         <span>{phone}</span>
