@@ -2,10 +2,12 @@ section.general-info {
     position: relative;
     width: 100%;
     padding: 10px;
-    background-color: hsl(0, 0%, 97%);
 
     h1 {
-        margin: 20px;
+        margin: 0 0 0.5em;
+        font-size: 3.2em;
+        line-height: 1.1;
+
     }
 
     span:not(:last-child)::after {
