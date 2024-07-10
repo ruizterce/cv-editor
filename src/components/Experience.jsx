@@ -101,6 +101,9 @@ export default function Experience() {
     return (
       <section className="experience">
         <EditBtn editFunction={toggleEdit} />
+        <div className="separator">
+          <h3>Experience</h3>
+        </div>
         <ul>
           {experience.map((experienceUnit) => {
             return (
@@ -108,12 +111,16 @@ export default function Experience() {
                 <h2>{experienceUnit.position}</h2>
                 <h4>
                   <span>{experienceUnit.company}</span>
-                  <span>{experienceUnit.date}</span>
+                  <span className="date-info">{experienceUnit.date}</span>
                 </h4>
                 <ul>
                   {experienceUnit.responsibilities.map(
                     (responsibility, index) => {
-                      return <li key={index}>{responsibility}</li>;
+                      return (
+                        <li className="responsibilities" key={index}>
+                          {responsibility}
+                        </li>
+                      );
                     }
                   )}
                 </ul>
@@ -126,12 +133,11 @@ export default function Experience() {
   } else {
     return (
       <section className="experience edit-mode">
+        <div className="separator">
+          <h3>Experience</h3>
+        </div>
         <form onSubmit={saveEdit}>
-          <button type="Submit">Save</button>
-          <button type="button" onClick={cancelEdit}>
-            Cancel
-          </button>
-          <p>Edit Mode</p>
+          <p>Editing...</p>
 
           <ul>
             {experience.map((experienceUnit) => {
@@ -221,6 +227,10 @@ export default function Experience() {
           </ul>
           <button type="button" onClick={() => handleAddExperience()}>
             Add experience
+          </button>
+          <button type="Submit">Save</button>
+          <button type="button" onClick={cancelEdit}>
+            Cancel
           </button>
         </form>
       </section>

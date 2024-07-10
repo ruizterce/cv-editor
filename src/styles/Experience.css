@@ -1,15 +1,34 @@
 section.experience {
     position: relative;
-    width: 100%;
     padding: 10px;
 
+    .separator {
+        position: relative;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+        margin: 1rem 0;
+
+        h3 {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -115%);
+            background-color: #fff;
+            padding: 0 20px;
+        }
+    }
 
     ul {
         padding: 0;
+        text-align: left;
     }
 
     li {
         list-style-type: none;
+    }
+
+    li.responsibilities {
+        padding: 0.5em 0;
     }
 
     h2 {
@@ -24,5 +43,10 @@ section.experience {
         content: "|";
         margin-left: 5px;
         margin-right: 5px;
+        font-weight: 300;
+    }
+
+    .date-info {
+        font-weight: 400;
     }
 }

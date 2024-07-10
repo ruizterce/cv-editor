@@ -41,11 +41,7 @@ export default function GeneralInfo() {
     return (
       <section className="general-info edit-mode">
         <form onSubmit={saveEdit}>
-          <button type="Submit">Save</button>
-          <button type="button" onClick={cancelEdit}>
-            Cancel
-          </button>
-          <p>Edit Mode</p>
+          <p>Editing...</p>
 
           <input
             className="name"
@@ -62,6 +58,10 @@ export default function GeneralInfo() {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
           ></input>
+          <button type="Submit">Save</button>
+          <button type="button" onClick={cancelEdit}>
+            Cancel
+          </button>
         </form>
       </section>
     );

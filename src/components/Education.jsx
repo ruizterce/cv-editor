@@ -27,6 +27,9 @@ export default function Education() {
     return (
       <section className="education">
         <EditBtn editFunction={toggleEdit} />
+        <div className="separator">
+          <h3>Education</h3>
+        </div>
         <ul>
           {education.map((educationalUnit) => {
             return (
@@ -34,7 +37,7 @@ export default function Education() {
                 <h2>{educationalUnit.title}</h2>
                 <h4>
                   <span>{educationalUnit.school}</span>
-                  <span>{educationalUnit.date}</span>
+                  <span className="date-info">{educationalUnit.date}</span>
                 </h4>
               </li>
             );
@@ -73,12 +76,11 @@ export default function Education() {
 
     return (
       <section className="education edit-mode">
+        <div className="separator">
+          <h3>Education</h3>
+        </div>
         <form onSubmit={saveEdit}>
-          <button type="Submit">Save</button>
-          <button type="button" onClick={cancelEdit}>
-            Cancel
-          </button>
-          <p>Edit Mode</p>
+          <p>Editing...</p>
 
           <ul>
             {education.map((educationalUnit) => {
@@ -132,6 +134,10 @@ export default function Education() {
           </ul>
           <button type="button" onClick={() => handleAddEducation()}>
             Add education
+          </button>
+          <button type="Submit">Save</button>
+          <button type="button" onClick={cancelEdit}>
+            Cancel
           </button>
         </form>
       </section>

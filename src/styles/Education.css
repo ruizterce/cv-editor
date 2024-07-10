@@ -1,18 +1,39 @@
 section.education {
     position: relative;
-    width: 100%;
     padding: 10px;
+    font-size: 1rem;
+
+    .separator {
+        position: relative;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+        margin: 1rem 0;
+
+        h3 {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -115%);
+            background-color: #fff;
+            padding: 0 20px;
+        }
+    }
+
 
     ul {
         padding: 0;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
 
     li {
         list-style-type: none;
+        margin: 0 1rem;
     }
 
     h2 {
-        margin: 1.2em 0 0.4em;
+        margin: 1em 0 0.4em;
     }
 
     h4 {
@@ -24,5 +45,10 @@ section.education {
         content: "|";
         margin-left: 5px;
         margin-right: 5px;
+        font-weight: 300;
+    }
+
+    .date-info {
+        font-weight: 300;
     }
 }
