@@ -49,4 +49,53 @@ section.experience {
     .date-info {
         font-weight: 400;
     }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        padding: 10px;
+        background-color: hsl(0, 0%, 70%);
+        border-radius: 10px;
+
+        input,
+        textarea {
+            margin-bottom: 1em;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        ul {
+            text-align: center;
+            margin: 0;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 3rem;
+                padding: 2rem;
+                background-color: hsl(0, 0%, 80%);
+                border-radius: 10px;
+
+                div.responsibility {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    textarea {
+                        width: 100%;
+                    }
+
+                    button {
+                        font-size: 0.9rem;
+                        padding: 0.2rem;
+                        margin-bottom: 1rem;
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
 }

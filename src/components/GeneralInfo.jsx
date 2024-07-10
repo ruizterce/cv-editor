@@ -41,23 +41,32 @@ export default function GeneralInfo() {
     return (
       <section className="general-info edit-mode">
         <form onSubmit={saveEdit}>
-          <p>Editing...</p>
+          <div>
+            <label htmlFor="name">Full Name</label>
+            <input
+              id="name"
+              className="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            ></input>
 
-          <input
-            className="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          ></input>
-          <input
-            className="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          ></input>
-          <input
-            className="phone"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          ></input>
+            <label htmlFor="email">Email</label>
+            <input
+              id="email"
+              className="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            ></input>
+
+            <label htmlFor="phone">Phone Number</label>
+            <input
+              id="phone"
+              className="phone"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            ></input>
+          </div>
+
           <button type="Submit">Save</button>
           <button type="button" onClick={cancelEdit}>
             Cancel

@@ -80,14 +80,13 @@ export default function Education() {
           <h3>Education</h3>
         </div>
         <form onSubmit={saveEdit}>
-          <p>Editing...</p>
-
           <ul>
             {education.map((educationalUnit) => {
               return (
                 <li key={educationalUnit.id}>
+                  <label htmlFor={`title_${educationalUnit.id}`}>Title</label>
                   <input
-                    key={`title_${educationalUnit.id}`}
+                    id={`title_${educationalUnit.id}`}
                     className="title"
                     value={educationalUnit.title}
                     onChange={(e) =>
@@ -98,8 +97,10 @@ export default function Education() {
                       )
                     }
                   />
+
+                  <label htmlFor={`school_${educationalUnit.id}`}>School</label>
                   <input
-                    key={`school_${educationalUnit.id}`}
+                    id={`school_${educationalUnit.id}`}
                     className="school"
                     value={educationalUnit.school}
                     onChange={(e) =>
@@ -110,8 +111,12 @@ export default function Education() {
                       )
                     }
                   />
+
+                  <label htmlFor={`date_${educationalUnit.id}`}>
+                    Date Range
+                  </label>
                   <input
-                    key={`date_${educationalUnit.id}`}
+                    id={`date_${educationalUnit.id}`}
                     className="date"
                     value={educationalUnit.date}
                     onChange={(e) =>
@@ -122,20 +127,22 @@ export default function Education() {
                       )
                     }
                   />
+
                   <button
+                    className="remove-btn"
                     type="button"
                     onClick={() => handleRemoveEducation(educationalUnit.id)}
                   >
-                    Remove
+                    Remove Education
                   </button>
                 </li>
               );
             })}
           </ul>
-          <button type="button" onClick={() => handleAddEducation()}>
+          <button type="button" onClick={handleAddEducation}>
             Add education
           </button>
-          <button type="Submit">Save</button>
+          <button type="submit">Save</button>
           <button type="button" onClick={cancelEdit}>
             Cancel
           </button>

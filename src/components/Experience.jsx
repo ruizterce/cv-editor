@@ -137,14 +137,15 @@ export default function Experience() {
           <h3>Experience</h3>
         </div>
         <form onSubmit={saveEdit}>
-          <p>Editing...</p>
-
           <ul>
             {experience.map((experienceUnit) => {
               return (
                 <li key={experienceUnit.id}>
+                  <label htmlFor={`position_${experienceUnit.id}`}>
+                    Position
+                  </label>
                   <input
-                    key={`position_${experienceUnit.id}`}
+                    id={`position_${experienceUnit.id}`}
                     className="position"
                     value={experienceUnit.position}
                     onChange={(e) =>
@@ -155,8 +156,12 @@ export default function Experience() {
                       )
                     }
                   />
+
+                  <label htmlFor={`company_${experienceUnit.id}`}>
+                    Company
+                  </label>
                   <input
-                    key={`company_${experienceUnit.id}`}
+                    id={`company_${experienceUnit.id}`}
                     className="company"
                     value={experienceUnit.company}
                     onChange={(e) =>
@@ -168,21 +173,43 @@ export default function Experience() {
                     }
                   />
 
+                  <label htmlFor={`date_${experienceUnit.id}`}>
+                    Date range
+                  </label>
+                  <input
+                    id={`date_${experienceUnit.id}`}
+                    className="date"
+                    value={experienceUnit.date}
+                    onChange={(e) =>
+                      handleUnitChange(
+                        experienceUnit.id,
+                        "date",
+                        e.target.value
+                      )
+                    }
+                  />
+
+                  <label>Responsibilities</label>
                   {experienceUnit.responsibilities.map(
                     (responsibility, index) => {
                       return (
-                        <div key={`${experienceUnit.id}_${index}`}>
-                          <input
+                        <div
+                          className="responsibility"
+                          key={`${experienceUnit.id}_${index}`}
+                        >
+                          <textarea
+                            type="text"
                             value={responsibility}
-                            onChange={(e) => {
+                            onChange={(e) =>
                               handleResponsibilityChange(
                                 experienceUnit.id,
                                 index,
                                 e.target.value
-                              );
-                            }}
+                              )
+                            }
                           />
                           <button
+                            className="remove-btn"
                             type="button"
                             onClick={() =>
                               handleRemoveResponsibility(
@@ -191,7 +218,7 @@ export default function Experience() {
                               )
                             }
                           >
-                            Remove Responsibility
+                            Remove
                           </button>
                         </div>
                       );
@@ -203,32 +230,23 @@ export default function Experience() {
                   >
                     Add Responsibility
                   </button>
-                  <input
-                    key={`date_${experienceUnit.id}`}
-                    className="date"
-                    value={experienceUnit.date}
-                    onChange={(e) =>
-                      handleUnitChange(
-                        experienceUnit.id,
-                        "date",
-                        e.target.value
-                      )
-                    }
-                  />
+
                   <button
+                    className="remove-btn"
                     type="button"
                     onClick={() => handleRemoveExperience(experienceUnit.id)}
                   >
-                    Remove
+                    Remove Experience
                   </button>
                 </li>
               );
             })}
           </ul>
-          <button type="button" onClick={() => handleAddExperience()}>
+
+          <button type="button" onClick={handleAddExperience}>
             Add experience
           </button>
-          <button type="Submit">Save</button>
+          <button type="submit">Save</button>
           <button type="button" onClick={cancelEdit}>
             Cancel
           </button>
