@@ -1,6 +1,8 @@
 import { useState } from "react";
 import data from "../data/data.js";
 import { v4 as uuidv4 } from "uuid";
+import EditBtn from "./EditBtn.jsx";
+import "../styles/Experience.css";
 
 export default function Experience() {
   const [experience, setExperience] = useState(data.experience);
@@ -98,13 +100,16 @@ export default function Experience() {
   if (!editMode) {
     return (
       <section className="experience">
-        <button onClick={toggleEdit}>Edit</button>
+        <EditBtn editFunction={toggleEdit} />
         <ul>
           {experience.map((experienceUnit) => {
             return (
               <li key={experienceUnit.id}>
-                <p>{experienceUnit.position}</p>
-                <p>{experienceUnit.company}</p>
+                <h2>{experienceUnit.position}</h2>
+                <h4>
+                  <span>{experienceUnit.company}</span>
+                  <span>{experienceUnit.date}</span>
+                </h4>
                 <ul>
                   {experienceUnit.responsibilities.map(
                     (responsibility, index) => {
@@ -112,7 +117,6 @@ export default function Experience() {
                     }
                   )}
                 </ul>
-                <p>{experienceUnit.date}</p>
               </li>
             );
           })}

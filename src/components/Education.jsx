@@ -1,6 +1,8 @@
 import { useState } from "react";
 import data from "../data/data.js";
+import EditBtn from "./EditBtn.jsx";
 import { v4 as uuidv4 } from "uuid";
+import "../styles/Education.css";
 
 export default function Education() {
   const [education, setEducation] = useState(data.education);
@@ -24,14 +26,16 @@ export default function Education() {
   if (!editMode) {
     return (
       <section className="education">
-        <button onClick={toggleEdit}>Edit</button>
+        <EditBtn editFunction={toggleEdit} />
         <ul>
           {education.map((educationalUnit) => {
             return (
               <li key={educationalUnit.id}>
-                <p>{educationalUnit.title}</p>
-                <p>{educationalUnit.school}</p>
-                <p>{educationalUnit.date}</p>
+                <h2>{educationalUnit.title}</h2>
+                <h4>
+                  <span>{educationalUnit.school}</span>
+                  <span>{educationalUnit.date}</span>
+                </h4>
               </li>
             );
           })}
