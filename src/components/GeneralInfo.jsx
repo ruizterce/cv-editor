@@ -1,5 +1,7 @@
 import { useState } from "react";
 import data from "../data/data.js";
+import editIcon from "../assets/file-edit.svg";
+import "../styles/GeneralInfo.css";
 
 export default function GeneralInfo() {
   const [name, setName] = useState(data.name);
@@ -29,10 +31,12 @@ export default function GeneralInfo() {
   if (!editMode) {
     return (
       <section className="general-info">
-        <button onClick={toggleEdit}>Edit</button>
-        <p>{name}</p>
-        <p>{email}</p>
-        <p>{phone}</p>
+        <button onClick={toggleEdit} className="edit-btn">
+          <img src={editIcon} alt="Edit" />
+        </button>
+        <h1>{name}</h1>
+        <span>{email}</span>
+        <span>{phone}</span>
       </section>
     );
   } else {
