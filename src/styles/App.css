@@ -13,3 +13,59 @@
     padding: 2rem 2rem;
   }
 }
+
+.move-up-btn-container {
+  position: relative;
+  height: 0px;
+  top: 29px;
+}
+
+.move-down-btn-container {
+  position: relative;
+  height: 0px;
+  top: -17px;
+}
+
+.move-btn {
+  position: relative;
+  left: 20px;
+  z-index: 1;
+  padding: 0;
+  font-size: 24px;
+  background: inherit;
+  filter: invert(0%);
+  transition: filter 0.5s ease-in-out, background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.move-btn:hover {
+  background: #fff;
+  filter: invert(100%);
+}
+
+.move-up-btn:hover {
+  animation: moveUp 0.5s linear forwards;
+}
+
+.move-down-btn:hover {
+  animation: moveDown 0.5s linear forwards;
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
