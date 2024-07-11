@@ -58,9 +58,13 @@ section.experience {
         background-color: hsl(0, 0%, 70%);
         border-radius: 10px;
 
+        label {
+            margin-top: 0.5em;
+        }
+
         input,
         textarea {
-            margin-bottom: 1em;
+            margin-bottom: 0.5em;
             padding: 8px;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -88,10 +92,10 @@ section.experience {
                         width: 100%;
                     }
 
-                    button {
+                    .remove-btn {
                         font-size: 0.9rem;
                         padding: 0.2rem;
-                        margin-bottom: 1rem;
+                        margin-bottom: 2rem;
                         width: 60%;
                     }
                 }
