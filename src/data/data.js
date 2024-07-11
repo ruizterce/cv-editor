@@ -4,6 +4,7 @@ let data = {
   name: "Anthony Edwards",
   email: "tonyed@email.com",
   phone: 123456789,
+  address: "08004, Barcelona",
   education: [
     {
       school: "IAM University",

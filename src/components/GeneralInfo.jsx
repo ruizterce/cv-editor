@@ -7,6 +7,7 @@ export default function GeneralInfo() {
   const [name, setName] = useState(data.name);
   const [email, setEmail] = useState(data.email);
   const [phone, setPhone] = useState(data.phone);
+  const [address, setAddress] = useState(data.address);
   const [editMode, setEditMode] = useState(false);
 
   function toggleEdit() {
@@ -18,6 +19,7 @@ export default function GeneralInfo() {
     data.name = name;
     data.email = email;
     data.phone = phone;
+    data.address = address;
     toggleEdit();
   }
 
@@ -25,6 +27,7 @@ export default function GeneralInfo() {
     setName(data.name);
     setEmail(data.email);
     setPhone(data.phone);
+    setAddress(data.address);
     toggleEdit();
   }
 
@@ -35,6 +38,7 @@ export default function GeneralInfo() {
         <h1>{name}</h1>
         <span>{email}</span>
         <span>{phone}</span>
+        <span>{address}</span>
       </section>
     );
   } else {
@@ -64,6 +68,14 @@ export default function GeneralInfo() {
               className="phone"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
+            ></input>
+
+            <label htmlFor="address">Location</label>
+            <input
+              id="address"
+              className="address"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
             ></input>
           </div>
 
