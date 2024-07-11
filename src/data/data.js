@@ -5,6 +5,13 @@ let data = {
   email: "tonyed@email.com",
   phone: 123456789,
   address: "08004, Barcelona",
+  skills: [
+    { title: "Leadership", grade: 10, id: uuidv4() },
+    { title: "Business Strategy", grade: 7, id: uuidv4() },
+    { title: "Quality Control", grade: 6, id: uuidv4() },
+    { title: "Data Analytics", grade: 9, id: uuidv4() },
+    { title: "Soft Skills", grade: 8, id: uuidv4() },
+  ],
   education: [
     {
       school: "IAM University",

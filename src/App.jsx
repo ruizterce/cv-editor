@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import GeneralInfo from "./components/GeneralInfo";
+import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
 import "./styles/App.css";
@@ -7,18 +8,20 @@ import "./styles/App.css";
 const App = () => {
   const [sections, setSections] = useState([
     "GeneralInfo",
+    "Skills",
     "Education",
     "Experience",
   ]);
 
   const componentMap = {
     GeneralInfo: GeneralInfo,
+    Skills: Skills,
     Education: Education,
     Experience: Experience,
   };
 
   const upButton = (index, event) => {
-    let updatedSections = [...sections]; // Create a copy of the sections array
+    let updatedSections = [...sections];
     const temp = updatedSections[index];
     updatedSections[index] = updatedSections[index - 1];
     updatedSections[index - 1] = temp;
@@ -27,7 +30,7 @@ const App = () => {
   };
 
   const downButton = (index) => {
-    let updatedSections = [...sections]; // Create a copy of the sections array
+    let updatedSections = [...sections];
     const temp = updatedSections[index];
     updatedSections[index] = updatedSections[index + 1];
     updatedSections[index + 1] = temp;
