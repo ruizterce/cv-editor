@@ -3,6 +3,8 @@ import GeneralInfo from "./components/GeneralInfo";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
+import PDFGenerator from "./components/PDFGenerator";
+import data from "./data/data";
 import "./styles/App.css";
 
 const App = () => {
@@ -38,8 +40,15 @@ const App = () => {
     event.target.blur();
   };
 
+  const [showPDF, setShowPDF] = useState(false);
+  const togglePDF = () => setShowPDF(!showPDF);
+
   return (
     <div>
+      <button onClick={togglePDF}>
+        {showPDF ? "Hide PDF" : "Generate PDF"}
+      </button>
+      {showPDF && <PDFGenerator data={data} sections={sections} />}
       {sections.map((section, index) => {
         const Component = componentMap[section];
         return (
