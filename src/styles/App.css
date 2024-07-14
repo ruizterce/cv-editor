@@ -38,6 +38,18 @@
   }
 }
 
+.PDF-btn {
+  position: absolute;
+  z-index: 1;
+  background: #fff;
+  filter: invert(0%);
+  border: 0.5px solid black;
+}
+
+.PDF-btn:hover {
+  filter: invert(100%);
+}
+
 .move-up-btn-container {
   position: relative;
   height: 0px;

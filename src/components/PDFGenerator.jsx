@@ -26,7 +26,15 @@ const styles = StyleSheet.create({
 });
 
 const PDFGenerator = ({ sections }) => (
-  <PDFViewer style={{ width: "100%", height: "100vh" }}>
+  <PDFViewer
+    style={{
+      width: "100%",
+      height: "100vh",
+      position: "relative",
+      top: "50px",
+      marginBottom: "50px",
+    }}
+  >
     <Document>
       <Page size="A4" style={styles.page}>
         <View>

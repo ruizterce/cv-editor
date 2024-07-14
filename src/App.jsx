@@ -41,11 +41,19 @@ const App = () => {
   };
 
   const [showPDF, setShowPDF] = useState(false);
-  const togglePDF = () => setShowPDF(!showPDF);
+  const togglePDF = (event) => {
+    setShowPDF(!showPDF);
+    event.target.blur();
+  };
 
   return (
     <div>
-      <button onClick={togglePDF}>
+      <button
+        className="PDF-btn"
+        onClick={(event) => {
+          togglePDF(event);
+        }}
+      >
         {showPDF ? "Hide PDF" : "Generate PDF"}
       </button>
       {showPDF && <PDFGenerator data={data} sections={sections} />}
