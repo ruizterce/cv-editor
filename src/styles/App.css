@@ -105,3 +105,24 @@
     transform: translateY(10px);
   }
 }
+
+.tag-btn {
+  position: fixed;
+  padding: 5px;
+  right: 0px;
+  bottom: 10px;
+  font-size: 1.3vh;
+  background-color: white;
+  border-radius: 5px 0 0 5px;
+  box-shadow: -1px 1px 2px black;
+
+  text-decoration: none;
+  color: hsl(197, 100%, 25%);
+  text-align: end;
+
+
+  a:after {
+    text-decoration: none;
+    color: var(--coyote);
+  }
+}

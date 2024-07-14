@@ -86,6 +86,11 @@ const App = () => {
           </div>
         );
       })}
+      <a href="https://github.com/ruizterce/cv-editor" target="_blank">
+        <button className="tag-btn" type="button">
+          @ruizterce
+        </button>
+      </a>
     </div>
   );
 };
