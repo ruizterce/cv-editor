@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "light",
     marginHorizontal: 5,
-    transform: "translateY(-5%)",
+    transform: "translateY(-4%)",
   },
   responsibilities: {
     fontSize: 10,

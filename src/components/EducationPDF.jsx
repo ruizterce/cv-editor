@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
   },
   educationItem: {
-    marginTop: 12,
+    marginTop: 8,
     marginHorizontal: 10,
     display: "flex",
     flexDirection: "column",
@@ -66,12 +66,21 @@ const styles = StyleSheet.create({
   },
   school: {
     fontSize: 12,
-    marginBottom: 4,
     fontWeight: "normal",
   },
   date: {
     fontSize: 12,
     fontWeight: "light",
+  },
+  contentContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  hSeparator: {
+    fontSize: 14,
+    fontWeight: "light",
+    marginHorizontal: 5,
+    transform: "translateY(-1.5%)",
   },
 });
 
@@ -84,8 +93,11 @@ const EducationPDF = ({ data }) => (
       {data.education.map((edu) => (
         <View key={edu.id} style={styles.educationItem}>
           <Text style={styles.title}>{edu.title}</Text>
-          <Text style={styles.school}>{edu.school}</Text>
-          <Text style={styles.date}>{edu.date}</Text>
+          <View style={styles.contentContainer}>
+            <Text style={styles.school}>{edu.school}</Text>
+            <Text style={styles.hSeparator}>|</Text>
+            <Text style={styles.date}>{edu.date}</Text>
+          </View>
         </View>
       ))}
     </View>
