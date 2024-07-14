@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   content: {
-    fontSize: 14,
+    fontSize: 10,
     marginRight: 5,
   },
   separator: {
@@ -53,9 +53,9 @@ const GeneralInfoPDF = ({ data }) => (
     <View style={styles.contentContainer}>
       <Text style={styles.content}>{data.email}</Text>
       <Text style={styles.separator}>|</Text>
-      <Text style={styles.content}>{data.phone}</Text>
+      <Text style={styles.content}> {data.phone}</Text>
       <Text style={styles.separator}>|</Text>
-      <Text style={styles.content}>{data.address}</Text>
+      <Text style={styles.content}> {data.address}</Text>
     </View>
   </View>
 );

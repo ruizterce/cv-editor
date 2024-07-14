@@ -21,14 +21,14 @@ const styles = StyleSheet.create({
   },
   separator: {
     width: "100%",
-    height: 1,
+    height: 0.5,
     backgroundColor: "#000",
-    marginBottom: 5,
+    marginBottom: 10,
     position: "relative",
   },
   separatorText: {
     position: "absolute",
-    top: -6,
+    top: -7,
     left: "50%",
     transform: "translateX(-30%)",
     backgroundColor: "#fff",
