@@ -1,28 +1,69 @@
 import React from "react";
-import { Text, View, StyleSheet } from "@react-pdf/renderer";
+import { Text, View, StyleSheet, Font } from "@react-pdf/renderer";
+
+Font.register({
+  family: "Roboto",
+  fonts: [
+    {
+      src: "../../public/Roboto/Roboto-Light.ttf",
+      fontWeight: "light",
+    },
+    {
+      src: "../../public/Roboto/Roboto-Bold.ttf",
+      fontWeight: "bold",
+    },
+  ],
+});
+
+Font.register({
+  family: "Merriweather",
+  fonts: [
+    {
+      src: "../../public/Merriweather/Merriweather-Light.ttf",
+      fontWeight: "normal",
+    },
+  ],
+});
 
 const styles = StyleSheet.create({
   section: {
+    paddingVertical: 10,
     paddingHorizontal: 20,
-    fontSize: "1rem",
-    textAlign: "left",
+    fontSize: 12,
+    fontFamily: "Roboto",
   },
-  title: {
-    fontSize: 18,
-    marginBottom: 10,
+  separator: {
+    width: "100%",
+    height: 1,
+    backgroundColor: "#000",
+    marginBottom: 25,
+    position: "relative",
+  },
+  separatorText: {
+    position: "absolute",
+    top: -6,
+    left: "50%",
+    transform: "translateX(-45%)",
+    backgroundColor: "#fff",
+    paddingHorizontal: 10,
+    borderRadius: 10,
+    fontSize: 12,
+    fontWeight: "bold",
   },
   company: {
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: "bold",
     marginBottom: 5,
   },
   position: {
-    fontSize: 14,
+    fontSize: 18,
     marginBottom: 5,
+    fontWeight: "bold",
   },
   date: {
     fontSize: 12,
     marginBottom: 5,
+    fontWeight: "light",
   },
   contentContainer: {
     flexDirection: "row",
@@ -32,27 +73,13 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "light",
     marginHorizontal: 5,
-    transform: "translateY(-6.5%)",
+    transform: "translateY(-5%)",
   },
   responsibilities: {
-    fontSize: 12,
+    fontSize: 10,
     marginBottom: 5,
-  },
-  separator: {
-    width: "100%",
-    height: 1,
-    backgroundColor: "#000",
-    marginBottom: 20,
-  },
-  separatorText: {
-    position: "absolute",
-    top: -8,
-    left: "50%",
-    transform: "translateX(-50%)",
-    backgroundColor: "#fff",
-    padding: 5,
-    borderRadius: 10,
-    fontSize: 12,
+    fontFamily: "Merriweather",
+    textAlign: "justify",
   },
 });
 
@@ -69,7 +96,7 @@ const ExperiencePDF = ({ data }) => (
           <Text style={styles.hSeparator}>|</Text>
           <Text style={styles.date}>{exp.date}</Text>
         </View>
-        <View style={{ marginLeft: 0 }}>
+        <View style={{ marginVertical: 7 }}>
           {exp.responsibilities.map((resp, index) => (
             <Text key={index} style={styles.responsibilities}>
               {resp}

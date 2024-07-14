@@ -1,5 +1,23 @@
 import React from "react";
-import { Text, View, StyleSheet } from "@react-pdf/renderer";
+import { Text, View, StyleSheet, Font } from "@react-pdf/renderer";
+
+Font.register({
+  family: "Roboto",
+  fonts: [
+    {
+      src: "../../public/Roboto/Roboto-Regular.ttf",
+      fontWeight: "normal",
+    },
+    {
+      src: "../../public/Roboto/Roboto-Light.ttf",
+      fontWeight: "light",
+    },
+    {
+      src: "../../public/Roboto/Roboto-Bold.ttf",
+      fontWeight: "bold",
+    },
+  ],
+});
 
 const styles = StyleSheet.create({
   section: {
@@ -7,6 +25,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     fontSize: 12,
     textAlign: "center",
+    fontFamily: "Roboto",
   },
   separator: {
     width: "100%",
@@ -19,13 +38,15 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: -6,
     left: "50%",
-    transform: "translateX(-50%)",
+    transform: "translateX(-41%)",
     backgroundColor: "#fff",
     paddingHorizontal: 10,
     borderRadius: 10,
     fontSize: 12,
+    fontWeight: "bold",
   },
   educationContainer: {
+    marginTop: 10,
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
@@ -46,9 +67,11 @@ const styles = StyleSheet.create({
   school: {
     fontSize: 12,
     marginBottom: 4,
+    fontWeight: "normal",
   },
   date: {
     fontSize: 12,
+    fontWeight: "light",
   },
 });
 

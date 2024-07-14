@@ -16,7 +16,8 @@ const styles = StyleSheet.create({
   page: {
     flexDirection: "column",
     backgroundColor: "#ffffff",
-    padding: 25,
+    paddingHorizontal: 30,
+    paddingVertical: 25,
   },
   section: {
     marginBottom: 10,

@@ -1,14 +1,34 @@
 import React from "react";
-import { Text, View, StyleSheet } from "@react-pdf/renderer";
+import { Text, View, StyleSheet, Font } from "@react-pdf/renderer";
+
+Font.register({
+  family: "Roboto",
+  fonts: [
+    {
+      src: "../../public/Roboto/Roboto-Regular.ttf",
+      fontWeight: "normal",
+    },
+    {
+      src: "../../public/Roboto/Roboto-Light.ttf",
+      fontWeight: "light",
+    },
+    {
+      src: "../../public/Roboto/Roboto-Bold.ttf",
+      fontWeight: "bold",
+    },
+  ],
+});
 
 const styles = StyleSheet.create({
   section: {
     padding: 10,
     textAlign: "center",
+    fontFamily: "Roboto",
   },
   title: {
     fontSize: 32,
     marginBottom: 10,
+    fontWeight: "bold",
   },
   contentContainer: {
     flexDirection: "row",
