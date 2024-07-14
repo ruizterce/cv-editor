@@ -65,9 +65,9 @@ export default function Education() {
 
     const handleAddEducation = () => {
       const newEducationalUnit = {
-        school: "Some University",
-        title: "Some Title",
-        date: "Some Dates",
+        school: "My University",
+        title: "My Title",
+        date: "My Dates",
         id: uuidv4(),
       };
       const updatedEducation = [...education, newEducationalUnit];

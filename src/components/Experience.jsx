@@ -42,10 +42,10 @@ export default function Experience() {
 
   const handleAddExperience = () => {
     const newExperienceUnit = {
-      company: "Some Company",
-      position: "Some Position",
-      date: "Some Dates",
-      responsibilities: ["Clock", "Work"],
+      company: "My Company",
+      position: "My Position",
+      date: "My Dates",
+      responsibilities: ["My first responsibility", "My second responsibility"],
       id: uuidv4(),
     };
     const updatedExperience = [...experience, newExperienceUnit];
