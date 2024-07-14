@@ -1,8 +1,8 @@
 section.skills {
     position: relative;
     padding: 10px;
-    font-size: 1rem;
     text-align: left;
+    font-family: 'Roboto';
 
     .separator {
         position: relative;

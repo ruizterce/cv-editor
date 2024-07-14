@@ -8,6 +8,30 @@
   font-size: 18px;
 }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('../../public/Roboto/Roboto-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../../public/Roboto/Roboto-Light.ttf');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../../public/Roboto/Roboto-Bold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../../public/Merriweather/Merriweather-Light.ttf');
+  font-weight: 200;
+}
+
 @media screen and (max-width: 600px) {
   #root {
     padding: 2rem 2rem;
