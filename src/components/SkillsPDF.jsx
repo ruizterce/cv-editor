@@ -5,7 +5,7 @@ Font.register({
   family: "Roboto",
   fonts: [
     {
-      src: "../../public/Roboto/Roboto-Bold.ttf",
+      src: "/Roboto/Roboto-Bold.ttf",
       fontWeight: "bold",
     },
   ],

@@ -5,11 +5,11 @@ Font.register({
   family: "Roboto",
   fonts: [
     {
-      src: "../../public/Roboto/Roboto-Light.ttf",
+      src: "/Roboto/Roboto-Light.ttf",
       fontWeight: "light",
     },
     {
-      src: "../../public/Roboto/Roboto-Bold.ttf",
+      src: "/Roboto/Roboto-Bold.ttf",
       fontWeight: "bold",
     },
   ],
@@ -19,7 +19,7 @@ Font.register({
   family: "Merriweather",
   fonts: [
     {
-      src: "../../public/Merriweather/Merriweather-Light.ttf",
+      src: "/Merriweather/Merriweather-Light.ttf",
       fontWeight: "normal",
     },
   ],

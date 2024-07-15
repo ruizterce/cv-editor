@@ -5,15 +5,15 @@ Font.register({
   family: "Roboto",
   fonts: [
     {
-      src: "../../public/Roboto/Roboto-Regular.ttf",
+      src: "/Roboto/Roboto-Regular.ttf",
       fontWeight: "normal",
     },
     {
-      src: "../../public/Roboto/Roboto-Light.ttf",
+      src: "/Roboto/Roboto-Light.ttf",
       fontWeight: "light",
     },
     {
-      src: "../../public/Roboto/Roboto-Bold.ttf",
+      src: "/Roboto/Roboto-Bold.ttf",
       fontWeight: "bold",
     },
   ],
